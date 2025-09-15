@@ -15,4 +15,15 @@ function createPodastCardGrid(podcast, onClick) {
     </div>
     <p><strong>Last Updated</strong>${podcast.lastUpdated}</p>
     </div>`;
+
+  //Add an event listener
+
+  createCard.addEventListener("click", () => {
+    if (onClick) {
+      onClick(podcast);
+    } else {
+      console.log(`Podcast clicked:${podcast.title}`);
+    }
+  });
+  return createCard;
 }
