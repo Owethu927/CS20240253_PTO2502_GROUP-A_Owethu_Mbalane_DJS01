@@ -1,4 +1,4 @@
-function createPodastCardGrid(podcast, onClick) {
+export function createPodastCardGrid(podcast, onClick) {
   // Creating a div
   const createCard = document.createElement("div");
   createCard.className("podcast-card");
