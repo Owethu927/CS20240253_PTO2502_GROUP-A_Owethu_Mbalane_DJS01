@@ -1,3 +1,6 @@
+import { genreService } from "../utils/genreService.js";
+import { dataUtils } from "../utils/dateUtils.js";
+
 export function createPodastCardGrid(podcast, onClick) {
   // Creating a div
   const createCard = document.createElement("div");
