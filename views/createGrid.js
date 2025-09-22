@@ -1,9 +1,8 @@
 import { createPodastCard } from "./components/createPodastCard.js";
 import { createModal } from "./components/createModal.js";
 
-export function createGrid(podcasts) {
-  const container = document.getElementById("container");
-  podcasts.forEach((container) => {
-    c;
-  });
-}
+/**
+ * grid render- responsible for creating the grids
+ *
+ * @principle it is a single responsibility principle that manages the layout and rendering only
+ */
