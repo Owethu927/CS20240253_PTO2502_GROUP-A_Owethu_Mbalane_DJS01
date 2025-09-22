@@ -26,9 +26,28 @@
 
     <!--modal-->
     <!-- Modal Container -->
-    <div></div>
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="title-section">
+          <h2 id="modalTitle"></h2>
+          <button class="close-btn" id="closeModal">&times;</button>
+        </div>
+        <div class="banner">
+          <img id="modalImage" class="modal-img" />
+          <div class="info-section">
+            <h3>Description</h3>
+            <p id="modalDesc"></p>
+            <h3>Genres</h3>
+            <div id="modalGenres" class="tags"></div>
+            <p id="modalUpdated" class="modal-updated-text"></p>
+          </div>
+        </div>
+        <h3>Seasons</h3>
+        <ul id="seasonList" class="season-list"></ul>
+      </div>
+    </div>
 
     <!--JS import-->
-    <script type="module" src="index.js"></script>
+    <script type="module" defer src="index.js"></script>
   </body>
 </html>
