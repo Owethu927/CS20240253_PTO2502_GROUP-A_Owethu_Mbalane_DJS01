@@ -6,3 +6,5 @@ import { createModal } from "./components/createModal.js";
  *
  * @principle it is a single responsibility principle that manages the layout and rendering only
  */
+
+export const createGrid = () => {};
