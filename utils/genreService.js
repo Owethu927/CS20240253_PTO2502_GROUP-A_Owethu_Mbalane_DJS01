@@ -1,14 +1,18 @@
 import { genres } from "../data";
 
+/**
+ * retrive genre details from genre ids
+ * @principle  SRP- Responsible formapping genre IDs into names
+ */
 export const GenreService = {
-  // This function takes an array of IDs and returns matching genre names
-  getGenreNames: function (genreIds) {
-    return genreIds.map((id) => {
-      // Try to find the genre with this ID
-      const found = genres.find((genre) => genre.id === id);
+  /**
+   * @param {number[]} genreIds - array of genres ID
+   * @return {string[]}
+   */
 
-      // Return the name if found, or "Unknown" if not
-      return found ? found.name : "Unknown";
-    });
+  getNames(genreIds) {
+    return genreIds.map(
+      (id) => genres.find((g) => g.id === id)?.title || "Unknown"
+    );
   },
 };
