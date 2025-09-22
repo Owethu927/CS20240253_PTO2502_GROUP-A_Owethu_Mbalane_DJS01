@@ -1,7 +1,19 @@
 import { genreService } from "../utils/genreService.js";
 import { dataUtils } from "../utils/dateUtils.js";
 
+/**
+ * Podcast Card Factory - Creates a DOM element for a podcast preview card.
+ *
+ * @principle SRP - Only responsible for rendering one podcast card.
+ * @principle OCP - Card rendering logic can be extended (e.g., add badges or icons) without changing other modules.
+ *
+ * @param {Object} podcast - Podcast object.
+ * @param {Function} onClick - Function to call on card click.
+ * @returns {HTMLDivElement} The constructed card element.
+ */
+
 export function createPodastCardGrid(podcast, onClick) {
+  const genreNames = genreService.getNames(podcast.genre);
   // Creating a div
   const createCard = document.createElement("div");
   createCard.className("podcast-card");
